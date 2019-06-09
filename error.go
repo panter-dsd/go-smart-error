@@ -17,6 +17,10 @@ type Error struct {
 }
 
 func (b *Error) Error() string {
+	if IsFullErrorInsteadError {
+		return FullError(b)
+	}
+
 	if len(b.msg) == 0 {
 		return b.err.Error()
 	}

@@ -56,7 +56,7 @@ func Wrapf(err error, message string, a ...interface{}) IError {
 			return fmt.Sprintf(message, a...)
 		}(),
 		err:        err,
-		shortError: false,
+		shortError: IsShortError,
 		file:       fileName,
 		line:       line,
 		funcName:   runtime.FuncForPC(pc).Name(),
