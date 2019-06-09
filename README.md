@@ -25,5 +25,5 @@ if err != nil {
 ```
 
 # Config 
-se.IsFullErrorInsteadError (false by default) - return FullError when Error called
-se.IsShortError (false by default) - print only last error message
+- se.IsFullErrorInsteadError (false by default) - return FullError when Error called
+- se.IsShortError (false by default) - print only last error message
