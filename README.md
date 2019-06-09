@@ -1,6 +1,13 @@
 # go-smart-error
 Golang smart error implementation
 
+# Features
+
+- Saving the position where the error was initiated
+- Saving the error trace
+- Short/Full error string
+- The same interface with standard error 
+
 # Using
 
 ```
