@@ -10,7 +10,7 @@ Golang smart error implementation
 
 # Using
 
-```
+```go
 import se "github.com/panter-dsd/go-smart-error"
 
 func foo() error {
