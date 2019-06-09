@@ -13,7 +13,9 @@ var projectRootPath string
 func InitProjectRootPath(pathToSkip string) {
 	_, p, _, _ := runtime.Caller(1)
 	index := strings.Index(p, pathToSkip)
-	projectRootPath = p[:index]
+	if index >= 0 {
+		projectRootPath = p[:index]
+	}
 }
 
 // FullError ...
@@ -42,7 +44,7 @@ func Wrapf(err error, message string, a ...interface{}) IError {
 	for i := 1; ; i++ {
 		var ok bool
 		pc, fileName, line, ok = runtime.Caller(i)
-		if !ok || !strings.Contains(fileName, "common/lerr") {
+		if !ok || !strings.Contains(fileName, "go-smart-error") {
 			break
 		}
 	}
